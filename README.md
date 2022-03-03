@@ -1,2 +1,24 @@
-# graduation-front
-我的毕业设计的前端部分，从零开始开发，后期会合并到主仓库。
+# mall
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
