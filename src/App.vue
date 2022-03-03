@@ -28,3 +28,22 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+<script>
+import { defineComponent } from '@vue/composition-api'
+import axios from 'axios'
+export default defineComponent({
+  setup() {
+    
+  },
+  mounted(){
+    let url = "https://mock.mengxuegu.com/mock/6220b047e7ee771c8c6e215a/example/table/list#!method=get";
+    axios.get(url).then(()=>{
+
+    })
+    
+  }
+})
+
+</script>
+
