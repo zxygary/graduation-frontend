@@ -9,11 +9,11 @@
       <a href="https://coding.imooc.com/class/392.html" target="_blank">慕课网全栈电商课程</a><span>|</span>
       <a href="https://github.com/zxygary/graduation-project" target="_blank">后端代码仓库</a><span>|</span>
       <a href="https://github.com/zxygary/graduation-front" target="_blank">前端代码仓库</a><span>|</span>
-      <a href="https://github.com/zxygary/LeetCode-Exercises" target="_blank">跟着我刷LeetCode吧</a><span>|</span>
+      <a href="https://github.com/zxygary/LeetCode-Exercises" target="_blank">跟着我刷LeetCode吧</a>
     </div>
     <div class="copyright">
       Copyright ©2022 <span class="domin">zxygary.con</span> All Right Reserved
-		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51092202000401"><img src="../../public/imgs/备案图标.png"><span class="domin">川公网安备 51092202000401号</span></a><span>|</span>
+		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51092202000401"><img src="../../public/imgs/备案图标.png" id="police"><span class="domin">川公网安备 51092202000401号</span></a><span>|</span>
 		<a target="_blank" href="https://beian.miit.gov.cn/"><span class="domin">蜀ICP备2021003606号</span></a>
     </div>
   </div>
@@ -24,6 +24,11 @@
   }
 </script>
 <style lang="scss" scoped>
+  #police{
+    height: 20px;
+    width: auto;
+    display: inline-block;
+  }
   .footer{
     height:234px;
     border-top:4px solid #FF6600;
