@@ -212,16 +212,16 @@
           this.phoneList = [res.list.slice(0,4),res.list.slice(4,8)];
         })
       },
-      addCart(){
-        this.showModal = true;
-        /*this.axios.post('/carts',{
+      addCart(id){
+        this.axios.post('/carts',{
           productId: id, 
           selected: true
-        }).then(()=>{
-
+        }).then((res)=>{
+          this.showModal = true;
+          this.$$store.dispatch('saveCartCount',res.cartTotalQuantity);
         }).catch(()=>{
           this.showModal = true;
-        })*/
+        })
       },
       goToCart(){
         this.$router.push('/cart');
