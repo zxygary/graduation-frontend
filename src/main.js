@@ -4,6 +4,7 @@ import axios from 'axios'
 // import VueAxios from 'vue-axios'
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyLoad from 'vue-lazyload'
+import store from './store'
 import App from './App.vue'
 // import env from './env'
 // mock开关
@@ -41,6 +42,7 @@ Vue.use(VueLazyLoad,{
 
 
 new Vue({
+  store,
   router,
   render: h => h(App),
 }).$mount('#app')
