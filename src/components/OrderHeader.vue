@@ -21,13 +21,14 @@
       title:String
     },
     computed:{
-      ...mapState(['username','cartCount'])
+      ...mapState(['username'])
     },
   }
 </script>
 <style lang="scss">
   .order-header{
     padding:30px 0;
+    border-bottom:2px solid #FF6600;
     .header-logo{
       float:left;
     }
@@ -37,15 +38,17 @@
       line-height:55px;
     }
     .title{
-      font-size:28px;
       float:left;
-      color:#333333;
       margin-left:54px;
+      h2{
+        font-size:28px;
+        color:#333333;
+      }
       span{
         font-size:14px;
         margin-left:17px;
         color:#999999;
-        font-weight:bold;
+        font-weight:200;
       }
     }
     .username{
