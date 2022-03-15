@@ -14,64 +14,64 @@ import AliPay from './pages/alipay'
 Vue.use(Router);
 
 export default new Router({
-    routes:[
+  routes:[
+    {
+      path:'/',
+      name:'home',
+      component:Home,
+      redirect:'/index',
+      children:[
         {
-            path:'/',
-            name: 'home',
-            component: Home,
-            redirect: '/index',
-            children:[
-                {
-                    path: '/index',
-                    name: 'index',
-                    component: Index,
-                },{
-                    path: '/product/:id',
-                    name: 'product',
-                    component: Product,
-                },{
-                    path: '/detail/:id',
-                    name: 'detail',
-                    component: Detail,
-                }
-            ]
-        },
-        {
-            path:'/login',
-            name: 'login',
-            component: Login
-        },
-        {
-            path:'/cart',
-            name: 'cart',
-            component: Cart
-        },
-        {
-            path:'/order',
-            name: 'order',
-            component: Order,
-            children:[
-                {
-                    path: 'list',
-                    name: 'order-list',
-                    component: OrderList,
-                },
-                {
-                    path: 'confirm',
-                    name: 'order-confirm',
-                    component: OrderConfirm,
-                },
-                {
-                    path: 'pay',
-                    name: 'order-pay',
-                    component: OrderPay,
-                },
-                {
-                    path: 'alipay',
-                    name: 'alipay',
-                    component: AliPay,
-                }
-            ]
+          path: '/index',
+          name: 'index',
+          component: Index,
+        }, {
+          path: '/product/:id',
+          name: 'product',
+          component: Product,
+        }, {
+          path: '/detail/:id',
+          name: 'detail',
+          component: Detail,
         }
-    ]
+      ]
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: Cart
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: Order,
+      children:[
+        {
+          path: 'list',
+          name: 'order-list',
+          component: OrderList,
+        },
+        {
+          path: 'confirm',
+          name: 'order-confirm',
+          component: OrderConfirm,
+        },
+        {
+          path: 'pay',
+          name: 'order-pay',
+          component: OrderPay,
+        },
+        {
+          path: 'alipay',
+          name: 'alipay',
+          component: AliPay,
+        }
+      ]
+    }
+  ]
 });

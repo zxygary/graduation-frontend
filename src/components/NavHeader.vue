@@ -128,7 +128,7 @@
         return this.$store.state.username;
       },
       cartCount(){
-        return this.$store.state.cartCount;
+        return this.$store.state.car      2tCount;
       }*/
     ...mapState(['username','cartCount'])
     },
