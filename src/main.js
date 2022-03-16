@@ -26,14 +26,18 @@ axios.interceptors.response.use(function(response){
   if(res.status == 0){
     return res.data;
   }else if(res.status == 10){
-    if(path != '#/index'){
+    if (path != '#/index'){
       window.location.href = '/#/login';
     }
     return Promise.reject(res);
   }else{
-    Message.warning(res.msg)
+    Message.warning(res.msg);
     return Promise.reject(res);
   }
+},(error)=>{
+  let res = error.response;
+  Message.error(res.data.message);
+  return Promise.reject(error);
 });
 
 // Vue.use(VueAxios.axios);
