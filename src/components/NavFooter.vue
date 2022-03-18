@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer-logo">
-      <img src="/public/imgs/logo-footer.png" alt="页脚logo">
+      <img src="./../../public/imgs/logo-footer.png" alt="页脚logo">
       <p>商城</p>
     </div>
     <div class="footer-link">

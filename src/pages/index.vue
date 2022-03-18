@@ -51,7 +51,7 @@
         </swiper>
       </div>
       <div class="ads-box">
-        <a v-bind:href="'/#/product/'+item.id" v-for="(item,index) in adList" v-bind:key="index">
+        <a v-bind:href="'/#/product/'+item.id" v-for="(item,index) in adsList" v-bind:key="index">
           <img v-bind="item.img" alt="">
         </a>
       </div>
