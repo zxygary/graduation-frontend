@@ -58,7 +58,6 @@
   import OrderHeader from './../components/OrderHeader'
   import ServiceBar from './../components/ServiceBar'
   import NavFooter from './../components/NavFooter'
-  // import { Message } from 'element-ui'
   export default{
     name:'index',
     components:{

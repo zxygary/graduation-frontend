@@ -20,27 +20,25 @@
           </div>
           <div class="tips">
             <div class="sms" @click="register">手机短信登录/注册</div>
-            <div class="reg">立即注册<span>|</span>忘记密码？</div>
+            <!-- <div class="reg">立即注册<span>|</span>忘记密码？</div> -->
           </div>
         </div>
       </div>
     </div>
     <div class="footer">
       <div class="footer-link">
-        <a href="https://github.com/zxygary" target="_blank">站长的github主页</a><span>|</span>
-        <a href="https://coding.imooc.com/class/392.html" target="_blank">慕课网全栈电商课程</a><span>|</span>
-        <a href="https://github.com/zxygary/graduation-project" target="_blank">后端代码仓库</a><span>|</span>
-        <a href="https://github.com/zxygary/graduation-front" target="_blank">前端代码仓库</a><span>|</span>
-        <a href="https://github.com/zxygary/LeetCode-Exercises" target="_blank">跟着我刷LeetCode吧</a>
+        <a href="https://www.imooc.com/u/1343480" target="_blank">河畔一角主页</a><span>|</span>
+        <a href="https://coding.imooc.com/class/113.html" target="_blank">Vue全栈课程</a><span>|</span>
+        <a href="https://coding.imooc.com/class/236.html" target="_blank">React全家桶课程</a><span>|</span>
+        <a href="https://coding.imooc.com/class/343.html" target="_blank">微信支付专项课程</a><span>|</span>
+        <a href="https://coding.imooc.com/class/392.html" target="_blank">配套课程：Java通用型支付+电商平台双系统实战</a>
       </div>
-      <p class="copyright">Copyright ©2022 zxygary.com All Right Reserved</p>
+      <p class="copyright">Copyright ©2020 mi.futurefe.com All Rights Reserved.</p>
     </div>
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex';
-// import { Message } from 'element-ui'
-
 export default {
   name: 'login',
   data(){
@@ -53,11 +51,15 @@ export default {
   methods:{
     login(){
       let { username,password } = this;
+      if(!username || !password){
+        this.$message.error('请输入正确的用户名和密码');
+        return;
+      }
       this.axios.post('/user/login',{
         username,
         password
       }).then((res)=>{
-        this.$cookie.set('userId',res.id,{expires:'1M'});
+        this.$cookie.set('userId',res.id,{expires:'Session'});
         // this.$store.dispatch('saveUserName',res.username);
         this.saveUserName(res.username);
         this.$router.push({
@@ -70,13 +72,15 @@ export default {
     },
     ...mapActions(['saveUserName']),
     register(){
-      this.axios.post('/user/register',{
+      this.$message.success('功能暂未开发');
+      return;
+      /*this.axios.post('/user/register',{
         username:'admin1',
         password:'admin1',
         email:'admin1@163.com'
       }).then(()=>{
         this.$message.success('注册成功');
-      })
+      })*/
     }
   }
 }

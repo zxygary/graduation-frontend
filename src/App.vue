@@ -20,9 +20,6 @@ export default {
       this.getUser();
       this.getCartCount();
     }
-    this.axios.get('/user/login').then((res)=>{
-      this.res = res;
-    });
   },
   methods:{
     getUser(){

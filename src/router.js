@@ -30,7 +30,7 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: () => import ('./pages/login.vue')
+      component: () => import('./pages/login.vue')
     },
     {
       path: '/cart',
@@ -40,12 +40,12 @@ export default new Router({
     {
       path: '/order',
       name: 'order',
-      component: () => import ('./pages/order.vue'),
+      component: () => import('./pages/order.vue'),
       children:[
         {
           path: 'list',
           name: 'order-list',
-          component: () => import ('./pages/orderList.vue')
+          component: () => import('./pages/orderList.vue')
         },
         {
           path: 'confirm',

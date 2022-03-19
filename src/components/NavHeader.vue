@@ -3,7 +3,7 @@
     <div class="nav-topbar">
       <div class="container">
         <div class="topbar-menu">
-          <a href="javascript:;">商城</a>
+          <a href="javascript:;">小米商城</a>
           <a href="javascript:;">MUI</a>
           <a href="javascript:;">云服务</a>
           <a href="javascript:;">协议规则</a>
@@ -13,7 +13,7 @@
           <a href="javascript:;" v-if="!username" @click="login">登录</a>
           <a href="javascript:;" v-if="username" @click="logout">退出</a>
           <a href="/#/order/list" v-if="username">我的订单</a>
-          <a href="javascript:;" class="my-cart" @click="goToCart"><span class="icon-cart"></span>购物车{{cartCount}}</a>
+          <a href="javascript:;" class="my-cart" @click="goToCart"><span class="icon-cart"></span>购物车({{cartCount}})</a>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="header-menu">
           <div class="item-menu">
-            <span>手机</span>
+            <span>小米手机</span>
             <div class="children">
               <ul>
                 <li class="product" v-for="(item,index) in phoneList" :key="index">
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="item-menu">
-            <span>电子产品</span>
+            <span>RedMi红米</span>
           </div>
           <div class="item-menu">
             <span>电视</span>
@@ -51,7 +51,7 @@
                     <div class="pro-img">
                       <img v-lazy="'/imgs/nav-img/nav-3-1.jpg'" alt="">
                     </div>
-                    <div class="pro-name">壁画电视 65英寸</div>
+                    <div class="pro-name">小米壁画电视 65英寸</div>
                     <div class="pro-price">6999元</div>
                   </a>
                 </li>
@@ -60,7 +60,7 @@
                     <div class="pro-img">
                       <img v-lazy="'/imgs/nav-img/nav-3-2.jpg'" alt="">
                     </div>
-                    <div class="pro-name">全面屏电视E55A</div>
+                    <div class="pro-name">小米全面屏电视E55A</div>
                     <div class="pro-price">1999元</div>
                   </a>
                 </li>
@@ -69,7 +69,7 @@
                     <div class="pro-img">
                       <img v-lazy="'/imgs/nav-img/nav-3-3.png'" alt="">
                     </div>
-                    <div class="pro-name">4A电视 32英寸</div>
+                    <div class="pro-name">小米电视4A 32英寸</div>
                     <div class="pro-price">699元</div>
                   </a>
                 </li>
@@ -78,7 +78,7 @@
                     <div class="pro-img">
                       <img v-lazy="'/imgs/nav-img/nav-3-4.jpg'" alt="">
                     </div>
-                    <div class="pro-name">4A电视 55英寸</div>
+                    <div class="pro-name">小米电视4A 55英寸</div>
                     <div class="pro-price">1799元</div>
                   </a>
                 </li>
@@ -87,7 +87,7 @@
                     <div class="pro-img">
                       <img v-lazy="'/imgs/nav-img/nav-3-5.jpg'" alt="">
                     </div>
-                    <div class="pro-name">4A电视 65英寸</div>
+                    <div class="pro-name">小米电视4A 65英寸</div>
                     <div class="pro-price">2699元</div>
                   </a>
                 </li>
@@ -115,7 +115,7 @@
   </div>
 </template>
 <script>
-  import {mapState} from 'vuex';
+  import {mapState} from 'vuex'
   export default{
     name:'nav-header',
     data(){
@@ -128,9 +128,9 @@
         return this.$store.state.username;
       },
       cartCount(){
-        return this.$store.state.car      2tCount;
+        return this.$store.state.cartCount;
       }*/
-    ...mapState(['username','cartCount'])
+      ...mapState(['username','cartCount'])
     },
     filters:{
       currency(val){
@@ -200,7 +200,7 @@
           background-color:#FF6600;
           text-align:center;
           color:#ffffff;
-          margin-right: 0;
+          margin-right:0;
           .icon-cart{
             @include bgImg(16px,12px,'/imgs/icon-cart-checked.png');
             margin-right:4px;

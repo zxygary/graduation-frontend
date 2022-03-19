@@ -1,14 +1,12 @@
 import Vue from 'vue'
 import router from './router'
 import axios from 'axios'
-// import VueAxios from 'vue-axios'
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyLoad from 'vue-lazyload'
 import { Message } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store'
 import App from './App.vue'
-// import env from './env'
+import env from './env'
 // mock开关
 const mock = true;
 if(mock){
@@ -18,7 +16,7 @@ if(mock){
 axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 // 根据环境变量获取不同的请求地址
-// axios.defaults.baseURL = env.baseURL;
+axios.defaults.baseURL = env.baseURL;
 // 接口错误拦截
 axios.interceptors.response.use(function(response){
   let res = response.data;
@@ -40,12 +38,12 @@ axios.interceptors.response.use(function(response){
   return Promise.reject(error);
 });
 
-// Vue.use(VueAxios.axios);
-Vue.prototype.axios = axios;
+Vue.prototype.$axios=axios;
 Vue.prototype.$message = Message;
 Vue.config.productionTip = false
 // Vue.use(VueAwesomeSwiper)
 Vue.use(Message);
+// Vue.use(VueResource)
 Vue.use(VueLazyLoad,{
   loading:'/imgs/loading-svg/loading-bars.svg'
 })
